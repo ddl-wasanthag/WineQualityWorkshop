@@ -1,0 +1,15 @@
+This example code has been tested with Domino Standard Environment Py3.8 R4.1 with following dockefile instructions.
+
+RUN pip install --user auto-sklearn shiny
+RUN pip install --user -f http://h2o-release.s3.amazonaws.com/h2o/latest_stable_Py.html h2o
+
+## Use with quay.io/domino/compute-environment-images:ubuntu20-py3.9-r4.2-domino5.3-standard
+#Switch to root user for elevated permisssions
+USER root
+
+#install python packages 
+RUN pip install h2o auto-sklearn==0.14.6 matplotlib seaborn jsonify flask pyuwsgi requests-oauthlib
+RUN pip install dominodatalab-data domino_data_capture
+
+RUN conda config --add channels conda-forge
+RUN conda install uwsgi --y
