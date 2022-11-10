@@ -1,0 +1,33 @@
+[W 2022-02-16 15:46:11.381 ServerApp] notebook_dir is deprecated, use root_dir
+/opt/conda/lib/python3.8/site-packages/jupyter_server_mathjax/app.py:40: FutureWarning: The alias `_()` will be deprecated. Use `_i18n()` instead.
+  help=_("""The MathJax.js configuration file that is to be used."""),
+[I 2022-02-16 15:46:11.663 ServerApp] jupyter_server_mathjax | extension was successfully linked.
+[I 2022-02-16 15:46:11.663 ServerApp] jupyter_server_proxy | extension was successfully linked.
+[W 2022-02-16 15:46:11.667 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2022-02-16 15:46:11.676 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-02-16 15:46:11.676 ServerApp] jupyterlab_git | extension was successfully linked.
+[I 2022-02-16 15:46:11.686 ServerApp] Writing Jupyter server cookie secret to /home/ubuntu/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2022-02-16 15:46:11.848 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-02-16 15:46:11.848 ServerApp] nbdime | extension was successfully linked.
+[W 2022-02-16 15:46:11.946 ServerApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[I 2022-02-16 15:46:11.955 ServerApp] nbclassic | extension was successfully loaded.
+[I 2022-02-16 15:46:11.956 ServerApp] jupyter_server_mathjax | extension was successfully loaded.
+[I 2022-02-16 15:46:11.987 ServerApp] jupyter_server_proxy | extension was successfully loaded.
+[I 2022-02-16 15:46:11.989 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.8/site-packages/jupyterlab
+[I 2022-02-16 15:46:11.990 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[I 2022-02-16 15:46:11.994 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2022-02-16 15:46:12.002 ServerApp] jupyterlab_git | extension was successfully loaded.
+[I 2022-02-16 15:46:12.134 ServerApp] nbdime | extension was successfully loaded.
+[I 2022-02-16 15:46:12.135 ServerApp] Serving notebooks from local directory: /
+[I 2022-02-16 15:46:12.135 ServerApp] Jupyter Server 1.13.0 is running at:
+[I 2022-02-16 15:46:12.135 ServerApp] http://run-620d1c20ca9e1e4ecb58407a-pd8fl:8888/elliott_botwick/WineQuality/notebookSession/620d1c20ca9e1e4ecb58407a/lab/tree/mnt
+[I 2022-02-16 15:46:12.135 ServerApp]  or http://127.0.0.1:8888/elliott_botwick/WineQuality/notebookSession/620d1c20ca9e1e4ecb58407a/lab/tree/mnt
+[I 2022-02-16 15:46:12.135 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2022-02-16 15:46:13.195 ServerApp] 302 GET /elliott_botwick/WineQuality/notebookSession/620d1c20ca9e1e4ecb58407a/ (10.12.111.169) 0.70ms
+[I 2022-02-16 15:46:13.345 ServerApp] 302 GET /elliott_botwick/WineQuality/notebookSession/620d1c20ca9e1e4ecb58407a/ (10.12.111.169) 0.48ms
+[I 2022-02-16 15:46:13.475 ServerApp] 302 GET /elliott_botwick/WineQuality/notebookSession/620d1c20ca9e1e4ecb58407a/ (10.12.111.169) 0.47ms
+[I 2022-02-16 15:46:17.934 LabApp] Build is up to date
+[I 2022-02-16 15:46:27.221 ServerApp] New terminal with automatic name: 1
+TermSocket.open: 1
+not able to serialize: expected string or bytes-like object
+TermSocket.open: Opened 1
