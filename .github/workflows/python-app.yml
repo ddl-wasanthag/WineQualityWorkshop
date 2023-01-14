@@ -33,7 +33,7 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test vars
-      run: echo ${{ vars.DOMINO_PROJECT_OWNER }} 
+      run: echo ${{ vars.DOMINO_PROJECT_NAME }} 
     - name: Test secrets
       run: echo ${{ secrets.DOMINO_USER_API_KEY }}   
     - name: Connect to Domino
