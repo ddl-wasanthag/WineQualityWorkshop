@@ -36,4 +36,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Connect to Domino
       run: |
-        python cicd/cicd.py
+        python cicd/cicd.py ${{ env.DOMINO_PROJECT_OWNER }}  ${{ env.DOMINO_PROJECT_NAME }} ${{ secrets.DOMINO_USER_API_KEY }} ${{ env.DOMINO_API_HOST }}d
