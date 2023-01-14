@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest
+        pip install flake8 pytest dominodatalab
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
@@ -37,3 +37,4 @@ jobs:
     - name: Connect to Domino
       run: |
         python cicd/cicd.py ${{ env.DOMINO_PROJECT_OWNER }}  ${{ env.DOMINO_PROJECT_NAME }} ${{ secrets.DOMINO_USER_API_KEY }} ${{ env.DOMINO_API_HOST }}d
+
