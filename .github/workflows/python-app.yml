@@ -13,8 +13,9 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  deploy-staging:
     runs-on: ubuntu-latest
+    environment: 'staging'
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
