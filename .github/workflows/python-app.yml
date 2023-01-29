@@ -13,10 +13,9 @@ permissions:
   contents: read
 
 jobs:
-  build:
-
+  deploy-staging:
     runs-on: ubuntu-latest
-
+    environment: 'staging'
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -34,7 +33,28 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Connect to Domino
+    - name: Test vars
+      run: echo ${{ vars.DOMINO_PROJECT_NAME }} 
+    - name: Test secrets
+      run: echo ${{ secrets.DOMINO_USER_API_KEY }}   
+    - name: Deploy to Domino Staging
       run: |
-        python cicd/cicd.py ${{ env.DOMINO_PROJECT_OWNER }}  ${{ env.DOMINO_PROJECT_NAME }} ${{ secrets.DOMINO_USER_API_KEY }} ${{ env.DOMINO_API_HOST }}d
-
+        python cicd/cicd.py ${{ vars.DOMINO_MODEL_OP }} ${{ vars.DOMINO_PROJECT_OWNER }}  ${{ vars.DOMINO_PROJECT_NAME }} ${{ secrets.DOMINO_USER_API_KEY }} ${{ vars.DOMINO_API_HOST }} ${{ vars.DOMINO_MODEL_NAME }} ${{ vars.DOMINO_MODEL_DESC }} ${{ vars.DOMINO_MODEL_FILE }} ${{ vars.DOMINO_MODEL_FUNC }} ${{ vars.DOMINO_MODEL_CE }}
+  deploy-production:
+    runs-on: ubuntu-latest
+    environment: 'production'
+    needs: deploy-staging
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest dominodatalab
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Deploy to Domino Production
+      run: |
+        python cicd/cicd.py ${{ vars.DOMINO_MODEL_OP }} ${{ vars.DOMINO_PROJECT_OWNER }}  ${{ vars.DOMINO_PROJECT_NAME }} ${{ secrets.DOMINO_USER_API_KEY }} ${{ vars.DOMINO_API_HOST }} ${{ vars.DOMINO_MODEL_NAME }} ${{ vars.DOMINO_MODEL_DESC }} ${{ vars.DOMINO_MODEL_FILE }} ${{ vars.DOMINO_MODEL_FUNC }} ${{ vars.DOMINO_MODEL_CE }}
