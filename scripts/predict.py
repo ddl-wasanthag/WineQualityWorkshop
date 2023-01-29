@@ -7,6 +7,7 @@ model_file_name = "models/sklearn_gbm.pkl"
 model = pickle.load(open(model_file_name, 'rb'))
 
 # from domino_prediction_logging.prediction_client import PredictionClient
+# A comment to kick off Gitghub actions CI/CD pipeline demo
 from domino_data_capture.data_capture_client import DataCaptureClient
 
 features = ['density', 'volatile_acidity', 'chlorides', 'is_red', 'alcohol']
