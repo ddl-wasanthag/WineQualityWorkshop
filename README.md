@@ -378,16 +378,21 @@ Update the Command to
 ```shell
 scripts/launcher.py ${split} ${max_models} ${max_runtime_sec} ${sort_metric}
 ```
-
-![image](raw/latest/readme_images/launcher1.png)
+<p align="center">
+<img src = readme_images/launcher1.png width="800">
+</p>
 
 Once the launcher is defined, run the launcher. You can set the split : 70 , max_models : 10 , max_runtime_sec : 30 and sort_metric : r2
 
-![image](raw/latest/readme_images/launcher2.png)
+<p align="center">
+<img src = readme_images/launcher2.png width="800">
+</p>
 
 This will take you to the jobs screen to monitor the status of the launcher job.
 
-![image](raw/latest/readme_images/launcher3.png)
+<p align="center">
+<img src = readme_images/launcher3.png width="800">
+</p>
 
 ## Section 3 - Deploy Model
 
