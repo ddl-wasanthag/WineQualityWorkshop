@@ -93,9 +93,29 @@ print("MSE: ", mse)
 with open('dominostats.json', 'w') as f:
     f.write(json.dumps({"R2": r2,
                        "MSE": mse}))
- 
+
 #Write results to dataframe for viz    
 results = pd.DataFrame({'Actuals':test.quality, 'Predictions': preds.as_data_frame()['predict']})
  
+print('Creating visualizations...')
+#Scatterplot
+fig1, ax1 = plt.subplots(figsize=(10,6))
+plt.title('H2o Actuals vs Predictions Scatter Plot')
+sns.regplot( 
+    data=results,
+    x = 'Actuals',
+    y = 'Predictions',
+    order = 3)
+plt.savefig('/mnt/artifacts/h2o_actual_v_pred_scatter.png')
+ 
+#Histogram
+fig2, ax2 = plt.subplots(figsize=(10,6))
+plt.title('h2o Actuals vs Predictions Histogram')
+plt.xlabel('Quality')
+sns.histplot(results, bins=6, multiple = 'dodge', palette = 'coolwarm')
+plt.savefig('/mnt/artifacts/h2o_actual_v_pred_hist.png')
+ 
+#Saving trained model to serialized pickle object 
+h2o.save_model(best_gbm, path ='/mnt/artifacts')
 
 print('Script complete!')
