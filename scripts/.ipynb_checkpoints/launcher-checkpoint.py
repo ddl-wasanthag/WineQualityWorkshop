@@ -42,8 +42,6 @@ data = data[list(important_feats.keys())+['quality']]
  
 train = data[0:round(len(data)*n/100)]
 test = data[train.shape[0]:]
-
-train.to_csv('folder/subfolder/out.csv') 
  
 print('H2O version -{}'.format(h2o.__version__))
  
