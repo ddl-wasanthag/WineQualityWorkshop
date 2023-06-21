@@ -11,13 +11,12 @@ import numpy as np
 from sklearn.metrics import r2_score, mean_squared_error
 import os
 import sys
+import datetime
  
 #Launcher values to set
 # split 70 - sys.argv[1]
 # max_models=10 - sys.argv[2], max_runtime_secs=30 - sys.argv[3], sort_metric="r2" - sys.argv[4]
-
-# run as a job
-# dataset_write_job.py 70 10 30 r2
+ 
  
 #Set train test split. (set default to 70 in the launcher)
 n = int(sys.argv[1])
@@ -48,7 +47,9 @@ data = data[list(important_feats.keys())+['quality']]
 train = data[0:round(len(data)*n/100)]
 test = data[train.shape[0]:]
 
-open_path = str('/mnt/data/wine-quality-open/WineQualityDataOpen.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+current_datetime = datetime.datetime.now().strftime("%Y%m%d%H%M")
+open_path = str('/mnt/data/wine-quality-open/WineQualityDataOpen_') +  os.environ.get('DOMINO_STARTING_USERNAME') + '_' + current_datetime + '.csv'
+
 print('Writing partial data to {}...'.format(open_path))
 train.to_csv(open_path) 
  
@@ -96,25 +97,5 @@ with open('dominostats.json', 'w') as f:
 #Write results to dataframe for viz    
 results = pd.DataFrame({'Actuals':test.quality, 'Predictions': preds.as_data_frame()['predict']})
  
-print('Creating visualizations...')
-#Scatterplot
-fig1, ax1 = plt.subplots(figsize=(10,6))
-plt.title('H2o Actuals vs Predictions Scatter Plot')
-sns.regplot( 
-    data=results,
-    x = 'Actuals',
-    y = 'Predictions',
-    order = 3)
-plt.savefig('/mnt/artifacts/h2o_actual_v_pred_scatter.png')
- 
-#Histogram
-fig2, ax2 = plt.subplots(figsize=(10,6))
-plt.title('h2o Actuals vs Predictions Histogram')
-plt.xlabel('Quality')
-sns.histplot(results, bins=6, multiple = 'dodge', palette = 'coolwarm')
-plt.savefig('/mnt/artifacts/h2o_actual_v_pred_hist.png')
- 
-#Saving trained model to serialized pickle object 
-h2o.save_model(best_gbm, path ='/mnt/artifacts')
- 
+
 print('Script complete!')
