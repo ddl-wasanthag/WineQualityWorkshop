@@ -23,7 +23,7 @@ n = int(sys.argv[1])
  
 #read in data then split into train and test
  
-path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+path = str('/mnt/data/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
 data = pd.read_csv(path)
 print('Read in {} rows of data'.format(data.shape[0]))
  
