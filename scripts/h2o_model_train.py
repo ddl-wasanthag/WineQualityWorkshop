@@ -17,7 +17,7 @@ n = 70
 
 #read in data then split into train and test
 
-path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+path = str('/mnt/data/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
 data = pd.read_csv(path)
 print('Read in {} rows of data'.format(data.shape[0]))
 
@@ -90,16 +90,16 @@ sns.regplot(
     x = 'Actuals',
     y = 'Predictions',
     order = 3)
-plt.savefig('/mnt/visualizations/h2o_actual_v_pred_scatter.png')
+plt.savefig('/mnt/artifacts/visualizations/h2o_actual_v_pred_scatter.png')
 
 #Histogram
 fig2, ax2 = plt.subplots(figsize=(10,6))
 plt.title('h2o Actuals vs Predictions Histogram')
 plt.xlabel('Quality')
 sns.histplot(results, bins=6, multiple = 'dodge', palette = 'coolwarm')
-plt.savefig('/mnt/visualizations/h2o_actual_v_pred_hist.png')
+plt.savefig('/mnt/artifacts/visualizations/h2o_actual_v_pred_hist.png')
 
 #Saving trained model to serialized pickle object 
-h2o.save_model(best_gbm, path ='/mnt/models')
+h2o.save_model(best_gbm, path ='/mnt/artifacts/models')
 
 print('Script complete!')
