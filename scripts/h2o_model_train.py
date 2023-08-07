@@ -90,16 +90,16 @@ sns.regplot(
     x = 'Actuals',
     y = 'Predictions',
     order = 3)
-plt.savefig('/mnt/artifacts/visualizations/h2o_actual_v_pred_scatter.png')
+plt.savefig('/mnt/artifacts/h2o_actual_v_pred_scatter.png')
 
 #Histogram
 fig2, ax2 = plt.subplots(figsize=(10,6))
 plt.title('h2o Actuals vs Predictions Histogram')
 plt.xlabel('Quality')
 sns.histplot(results, bins=6, multiple = 'dodge', palette = 'coolwarm')
-plt.savefig('/mnt/artifacts/visualizations/h2o_actual_v_pred_hist.png')
+plt.savefig('/mnt/artifacts/h2o_actual_v_pred_hist.png')
 
 #Saving trained model to serialized pickle object 
-h2o.save_model(best_gbm, path ='/mnt/artifacts/models')
+h2o.save_model(best_gbm, path ='/mnt/code/models')
 
 print('Script complete!')
