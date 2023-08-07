@@ -11,13 +11,13 @@ domino_project =domino.Domino(project = str(os.environ.get('DOMINO_PROJECT_OWNER
 
 
 print('Kicking off sklearn model training')
-domino_project.job_start(command='scripts/sklearn_model_train.py')
+domino_project.job_start(command='scripts/sklearn_model_train.py', title='sklearn')
 
 print('Kicking off R model training')
-domino_project.job_start(command='scripts/R_model_train.R')
+domino_project.job_start(command='scripts/R_model_train.R', title='R Training')
 
 
 print('Kicking off h2o model training')
-domino_project.job_start(command='scripts/h2o_model_train.py')
+domino_project.job_start(command='scripts/h2o_model_train.py', title='h2o automl')
 
 print('Done!')
