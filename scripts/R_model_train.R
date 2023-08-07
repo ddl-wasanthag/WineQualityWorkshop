@@ -1,6 +1,6 @@
 print("Reading in data")
 project_name <- Sys.getenv('DOMINO_PROJECT_NAME')
-path <- paste('/mnt/data/local/',project_name,'/WineQualityData.csv')
+path <- paste('/mnt/data/',project_name,'/WineQualityData.csv')
 path <- gsub(" ", "", path, fixed = TRUE)
 data <- read.csv(file=path)
 head(data)
