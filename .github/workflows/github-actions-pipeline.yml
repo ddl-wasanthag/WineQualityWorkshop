@@ -38,7 +38,7 @@ jobs:
         python cicd/cicd.py ${{ vars.DOMINO_MODEL_OP }} ${{ vars.DOMINO_PROJECT_OWNER }}  ${{ vars.DOMINO_PROJECT_NAME }} ${{ secrets.DOMINO_USER_API_KEY }} ${{ vars.DOMINO_API_HOST }} ${{ vars.DOMINO_MODEL_NAME }} ${{ vars.DOMINO_MODEL_DESC }} ${{ vars.DOMINO_MODEL_FILE }} ${{ vars.DOMINO_MODEL_FUNC }} ${{ vars.DOMINO_MODEL_CE }}
     - name: Test Pre Prod Model API
       run: |
-        cicd/test_api.sh
+        bash cicd/test_api.sh
   deploy-production:
     runs-on: ubuntu-latest
     environment: 'production'
