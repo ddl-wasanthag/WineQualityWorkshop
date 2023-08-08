@@ -1,7 +1,9 @@
 #!/bin/bash
+
 output=$(python3 test_api.py)
-if [[ $output =~ ^[0-9]+$ ]]; then
-    if (( output >= 1 && output <= 10 )); then
+echo $output
+if [[ $output =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+    if (( $(bc <<< "$output >= 1 && $output <= 10") )); then
         echo "Output is between 1 and 10: $output"
         exit 0  # Exit with success code
     else
