@@ -1,5 +1,5 @@
 #!/bin/bash
-output = $(python3 test_api.py)
+output=`python3 test_api.py`
 echo $output
 if [[ $output =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
     if (( $(bc <<< "$output >= 1 && $output <= 10") )); then
