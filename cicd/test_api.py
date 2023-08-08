@@ -1,5 +1,6 @@
 #requires the model API access token
 import requests
+import json
 
 url = "https://wgamage18435.cs.domino.tech:443/models/64d1255bca137a66a4a4a2ce/latest/model"
 payload = {
@@ -30,9 +31,11 @@ response = requests.post(url,
 
 
 if response.status_code == 200:
-    result = response.json()
-    print("API response:", result)
+    json_response = response.json()
+    prediction = json_response['result']['prediction']
+    print(prediction)
 else:
     print("Error:", response.status_code)
     print("Response content:", response.content)
+
 
