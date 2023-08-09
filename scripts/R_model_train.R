@@ -45,7 +45,7 @@ print(mse_lm)
 diagnostics = list("R2" = rsquared_lm[1], 
                    "MSE"=mse_lm)
 library(jsonlite)
-fileConn<-file("dominostats.json")
+fileConn<-file("/mnt/artifacts/dominostats.json")
 writeLines(toJSON(diagnostics), fileConn)
 close(fileConn)
 

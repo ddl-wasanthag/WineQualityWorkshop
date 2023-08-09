@@ -74,7 +74,7 @@ print("R2 Score: ", r2)
 print("MSE: ", mse)
 
 #Code to write R2 value and MSE to dominostats value for population in experiment manager
-with open('dominostats.json', 'w') as f:
+with open('/mnt/artifacts/dominostats.json', 'w') as f:
     f.write(json.dumps({"R2": r2,
                        "MSE": mse}))
 
