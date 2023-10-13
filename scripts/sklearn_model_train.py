@@ -51,7 +51,7 @@ print("R2 Score: ", round(r2_score(y_test, preds),3))
 print("MSE: ", round(mean_squared_error(y_test, preds),3))
 
 #Code to write R2 value and MSE to dominostats value for population in experiment manager
-with open('dominostats.json', 'w') as f:
+with open('/mnt/dominostats.json', 'w') as f:
     f.write(json.dumps({"R2": round(r2_score(y_test, preds),3),
                        "MSE": round(mean_squared_error(y_test,preds),3)}))
 
@@ -67,13 +67,13 @@ sns.regplot(
     x = 'Actuals',
     y = 'Predictions',
     order = 3)
-plt.savefig('/mnt/visualizations/sklearn_actual_v_pred_scatter.png')
+plt.savefig('/mnt/artifacts/sklearn_actual_v_pred_scatter.png')
 
 fig2, ax2 = plt.subplots(figsize=(10,6))
 plt.title('Sklearn Actuals vs Predictions Histogram')
 plt.xlabel('Quality')
 sns.histplot(results, bins=6, multiple = 'dodge', palette = 'coolwarm')
-plt.savefig('/mnt/visualizations/sklearn_actual_v_pred_hist.png')
+plt.savefig('/mnt/artifacts/sklearn_actual_v_pred_hist.png')
 
 #Saving trained model to serialized pickle object 
 

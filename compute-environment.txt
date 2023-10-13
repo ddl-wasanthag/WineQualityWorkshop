@@ -7,7 +7,9 @@ RUN pip install --user -f http://h2o-release.s3.amazonaws.com/h2o/latest_stable_
 #Switch to root user for elevated permisssions
 USER root
 
-#install python packages 
+#install python packages
+# The following was reported required in Domino 5.5.1
+# RUN pip install cryptography==38 pyOpenSSL==22.1 h2o auto-sklearn==0.14.6 matplotlib seaborn jsonify flask pyuwsgi requests-oauthlib
 RUN pip install h2o auto-sklearn==0.14.6 matplotlib seaborn jsonify flask pyuwsgi requests-oauthlib
 RUN pip install dominodatalab-data domino_data_capture
 

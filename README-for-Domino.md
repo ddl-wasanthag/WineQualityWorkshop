@@ -15,99 +15,71 @@
 ### Lab 1.1 - Forking Existing Projects
 Once you have access to the Domino training environment - Guide your mouse to the left blue menu and click the **Search** page. Afterwards, type the word 'Training' in the cell provided and click enter to discover any projects tagged under 'Training'. (The left blue menu shrinks to show only the icon of the pages. Unshrink the left blue menu by guiding your mouse over the icon pages.)
 
-<!-- ![image](readme_images/SearchIndex.png) -->
+![image](raw/latest/readme_images/SearchIndex.png)
 
-<p align="center">
-<img src = readme_images/SearchIndex.png width="800">
-</p>
 
 Select the project called WineQuality
 
-<!-- ![image](readme_images/Search.png) -->
 
-<p align="center">
-<img src = readme_images/Search.png width="800">
-</p>
+![image](raw/latest/readme_images/Search.png)
+
+
 
 Read the readme to learn more about the project's use case, status, etc.
 
 In the top right corner, choose the icon to **fork** the project. Name the project *Domino-Training-yourname*
 
-<!-- ![image](readme_images/Fork.png) -->
+![image](raw/latest/readme_images/Fork.png)
 
-<p align="center">
-<img src = readme_images/Fork.png width="800">
-</p>
 
 In your new project - go into the settings tab
 
 View the default hardware tier and compute environment - ensure they are set to 'Small' and 'Domino-Workshop-Environment' respectively:
 
-<!-- ![image](readme_images/ProjectSettings.png) -->
+![image](raw/latest/readme_images/ProjectSettings.png)
 
-<p align="center">
 
-<img src = readme_images/ProjectSettings.png width="800">
-</p>
 
 Go to the Access and Sharing tab - change your project visibility to **Public**
 
-<!-- ![image](readme_images/ProjectVisibility.png) -->
+![image](raw/latest/readme_images/ProjectVisibility.png) 
 
-<p align="center">
-<img src = readme_images/ProjectVisibility.png width="800">
-</p>
+
 
 Add your instructor or another attendee as a collaborator in your project. 
-<!-- ![image](readme_images/AddCollaborator.png) -->
+![image](raw/latest/readme_images/AddCollaborator.png)
 
-<p align="center">
-<img src = readme_images/AddCollaborator.png width="800">
-</p>
 
 Change their permissions to Results Consumer.
-<!-- ![image](readme_images/ResultsConsumer.png) -->
+![image](raw/latest/readme_images/ResultsConsumer.png)
 
-<p align="center">
-<img src = readme_images/ResultsConsumer.png width="800">
-</p>
+
 
 ### Lab 1.2 - Defining Project Goals
 
 Click back into the Overview area of your project. Then navigate to the Manage tab.
 
-<!-- ![image](readme_images/Overview.png) -->
+![image](raw/latest/readme_images/Overview.png)
 
-<p align="center">
-<img src = readme_images/Overview.png width="800">
-</p>
+
 
 Click on Add Goals
 
-<!-- ![image](readme_images/AddProjectGoals.png) -->
+![image](raw/latest/readme_images/AddProjectGoals.png)
 
-<p align="center">
-<img src = readme_images/AddProjectGoals.png width="800">
-</p>
 
 For the goal title type in 'Explore Data' and click save. Once the goal is saved click the drop down on the right to mark the goal status as 'Data Acquisition and Exploration'.
 
 
-<!-- ![image](readme_images/Goal1status.png) -->
+![image](raw/latest/readme_images/Goal1status.png)
 
-<p align="center">
 
-<img src = readme_images/Goal1status.png width="800">
-</p>
 
 [optional] - Add a comment to the goal and tag a collaborator you've added earlier by typing @ then their username. Please click on the paper airplane to submit the comment.
 
-<!-- ![image](readme_images/Goal1comment.png) -->
+![image](raw/latest/readme_images/Goal1comment.png)
 
-<p align="center">
 
-<img src = readme_images/Goal1comment.png width="800">
-</p>
 
 ### Lab 1.3 - Add Data Source
 
@@ -115,28 +87,19 @@ We will now add a data connection defined by the admin of our project to later q
 
 Select the 'domino-winequality-workshop' s3 bucket connection and click add to project
 
-<!-- ![image](readme_images/AddDataSource.png) -->
+![image](raw/latest/readme_images/AddDataSource.png)
 
-<p align="center">
 
-<img src = readme_images/AddDataSource.png width="800">
-</p>
 
 Select the 'domino-winequality-workshop' s3 bucket connection and click add to project
 
-<!-- ![image](readme_images/AddS3.png) -->
+![image](raw/latest/readme_images/AddS3.png)
 
-<p align="center">
-<img src = readme_images/AddS3.png width="800">
-</p>
 
 The data source should look like the image below
 
-<!-- ![image](readme_images/S3done.png) -->
+![image](raw/latest/readme_images/S3done.png)
 
-<p align="center">
-<img src = readme_images/S3done.png width="800">
-</p>
 
 This concludes all labs in section 1 - Prepare Project and Data! 
 
@@ -145,19 +108,15 @@ This concludes all labs in section 1 - Prepare Project and Data!
 ### Lab 2.1 - Inspect Compute Environment
 From the left blue menu click on the cube icon page called 'Environments'.
 
-<!-- ![image](readme_images/ShowEnv.png) -->
+ ![image](raw/latest/readme_images/ShowEnv.png) 
 
-<p align="center">
-<img src = readme_images/ShowEnv.png width="800">
-</p>
+
 
 Select 'Domino-Workshop-Environment' 
 
-<!-- ![image](readme_images/EnvironmentsPage.png) -->
+![image](raw/latest/readme_images/EnvironmentsPage.png)
 
-<p align="center">
-<img src = readme_images/EnvironmentsPage.png width="800">
-</p>
+
 
 Inspect the dockerfile to understand the packages installed, configurations specified, and kernels installed etc. 
 
@@ -169,11 +128,8 @@ Here we have a script that executes upon startup of workspace sessions or job (p
 
 Finally navigate to the Projects tab - you should see all projects that are leveraging this compute environment. Click on your project to navigate back to your project. 
 
-<!-- ![image](readme_images/SaidEnvs.png) -->
+![image](raw/latest/readme_images/SaidEnvs.png)
 
-<p align="center">
-<img src = readme_images/SaidEnvs.png width="800">
-</p>
 
 Click into the Workspaces tab to prepare for the next lab.
 
@@ -181,9 +137,8 @@ Click into the Workspaces tab to prepare for the next lab.
 
 In the top right corner click Create New Workspace
 
-<p align="center">
-<img src = readme_images/AddWorkspace.png width="800">
-</p>
+![image](raw/latest/readme_images/AddWorkspace.png)
+
 
 Type a name for the Workspace in the 'Workspace Name' cell and next click through the available Compute Environments in the Workspace Environment drop down button. Next, ensure that Domino-Workspace-Environment is selected.
 
@@ -193,27 +148,21 @@ Click the Hardware Tier dropdown to browse all available hardware configurations
 
 Click Launch now.
 
-<p align="center">
-<img src = readme_images/LaunchWorkspace.png width="800">
-</p>
+![image](raw/latest/readme_images/LaunchWorkspace.png)
+
 
 Once the workspace is launched, create a new python notebook by clicking here:
 
-<p align="center">
-<img src = readme_images/NewNotebook.png width="800">
-</p>
+![image](raw/latest/readme_images/NewNotebook.png)
+
 
 Once your notebook is loaded, click on the left blue menu and click on the Data page, then onto the data source we added in lab 1 as displayed below
 
-<p align="center">
-<img src = readme_images/DataTab.png width="800">
-</p>
+![image](raw/latest/readme_images/DataTab.png)
+
 
 Copy the provided code snippet into your notebook and run the cell
-
-<p align="center">
-<img src = readme_images/S3CodeSnippet.png width="800">
-</p>
+![image](raw/latest/readme_images/S3CodeSnippet.png)
 
 After running the code snippet. Copy the code below into the following cell 
 
@@ -265,25 +214,20 @@ df.to_csv(path, index = False)
 
 Your notebook should be populated like the display below.
 
-<!-- ![image](readme_images/EDAView.png) -->
+![image](raw/latest/readme_images/EDAView.png)
 
-<p align="center">
-<img src = readme_images/EDAView.png width="800">
-</p>
 
 Rename your notebook 'EDA_code.ipynb' by right clicking on the file name as shown below then click the Save icon.
 
-<p align="center">
-<img src = readme_images/RenameAndSaveNotebook.png width="800">
-</p>
+![image](raw/latest/readme_images/RenameAndSaveNotebook.png)
+
 
 ### Lab 2.3 - Syncing Files
 
 Now that we've finished working on our notebook and written data back to our project, we want to sync our latest work. To do so click on the File Changes tab in the top left corner of your screen - 
 
-<p align="center">
-<img src = readme_images/SyncProject.png width="800">
-</p>
+![image](raw/latest/readme_images/SyncProject.png)
+
 
 Enter an informative but brief commit message such as "Completed EDA notebook" and click to Sync All Changes. 
 
@@ -291,23 +235,18 @@ Click the Domino logo on the upper left corner of the blue menu and select on th
 
 Notice that the latest commit will reflect the commit message you just logged and you can see 'EDA_code.ipynb' in your file directory.
 
-<p align="center">
-<img src = readme_images/DFS.png width="800">
-</p>
+![image](raw/latest/readme_images/DFS.png)
+
 
 Click on your notebook to view it. On the top of your screen and click 'Link to Goal' in the dropdown, after selecting the goal you created in Lab 1.2
 
-<p align="center">
-<img src = readme_images/LinkToGoal.png width="800">
-</p>
+![image](raw/latest/readme_images/LinkToGoal.png)
 
 Now navigate to Overview, then to the manage tab and see your linked notebook.
 
 Click the ellipses on the goal to mark the goal as complete
+![image](raw/latest/readme_images/MarkGoalComplete.png)
 
-<p align="center">
-<img src = readme_images/MarkGoalComplete.png width="800">
-</p>
 
 
 ### Lab 2.4 - Run and Track Experiments
@@ -317,51 +256,39 @@ Now it's time to train our models!
 We are taking a three pronged approach and building a model in sklearn (python), xgboost (R), and an auto-ml ensemble model (h2o).
 
 First, navigate back to your JupyterLab workspace tab. In your file browser go into the scripts folder and inspect 'multitrain.py'
+![image](raw/latest/readme_images/MultiTrain.png)
 
-<p align="center">
-<img src = readme_images/MultiTrain.png width="800">
-</p>
 
 Check out the code in the script and comments describing the purpose of each line of code.
 
 You can also check out any of the training scripts that multitrain.py will call.
 
 Now switch into your other browser tab to return to your domino project. Navigate to the Jobs page. Click on **Run**.
+![image](raw/latest/readme_images/Jobspage.png)
 
-<p align="center">
-<img src = readme_images/Jobspage.png width="800">
-</p>
 
 Type in the following command below in the **File Name** section of the **Start a Job** pop up window. Click on **Start** to run the job.
 
 ```shell
 scripts/multitrain.py
 ```
+![image](raw/latest/readme_images/Jobsrun.png)
 
-<p align="center">
-<img src = readme_images/Jobsrun.png width="800">
-</p>
 
 Watch as three job runs have appeared, you may see them in starting, running or completed state.
+![image](raw/latest/readme_images/Jobs.png)
 
-<p align="center">
-<img src = readme_images/Jobs.png width="800">
-</p>
 
 Click into the sklearn_model_train.py job run.
 
 In the details tab of the job run note that the compute environment and hardware tier are tracked to document not only who ran the experiment and when, but what versions of the code, software, and hardware were executed.
+![image](raw/latest/readme_images/sklearnRunDetails.png)
 
-<p align="center">
-<img src = readme_images/sklearnRunDetails.png width="800">
-</p>
 
 
 Click on the Results tab of the job. Scroll down to view the visualizations and other outputs of the job.
+![image](raw/latest/readme_images/sklearnResults.png)
 
-<p align="center">
-<img src = readme_images/sklearnResults.png width="800">
-</p>
 
 
 We've now trained 3 models and it is time to select which model we'd like to deploy.
@@ -370,29 +297,6 @@ We've now trained 3 models and it is time to select which model we'd like to dep
 
 In the next section of labs we will deploy the model we trained here!
 
-### Lab 2.5 - Use Launcher to run a job
-
-Let's use a launcher to run one of the jobs you have previously run, scripts/h2o_model_train.py, this time with parameters set from a web form.
-
-Update the Command to 
-```shell
-scripts/launcher.py ${split} ${max_models} ${max_runtime_sec} ${sort_metric}
-```
-<p align="center">
-<img src = readme_images/launcher1.png width="800">
-</p>
-
-Once the launcher is defined, run the launcher. You can set the split : 70 , max_models : 10 , max_runtime_sec : 30 and sort_metric : r2
-
-<p align="center">
-<img src = readme_images/launcher2.png width="800">
-</p>
-
-This will take you to the jobs screen to monitor the status of the launcher job.
-
-<p align="center">
-<img src = readme_images/launcher3.png width="800">
-</p>
 
 ## Section 3 - Deploy Model
 
@@ -403,10 +307,8 @@ Now that you have completed model training and selection - it's time to get your
 In the last lab - we trained a sklearn model and saved it to a serialized (pickle) file. To deploy this trained model - we'll use a script to load in the saved model object and pass new records for scoring. 
 
 To do so - navigate to the **Model APIs** tab in your project. Click **New Model**.
+![image](raw/latest/readme_images/NewModelAPI.png)
 
-<p align="center">
-<img src = readme_images/NewModelAPI.png width="800">
-</p>
 
 Name your model 'wine-model-yourname'
     
@@ -430,9 +332,8 @@ Sample Scoring Request:
     
 Be sure to check the box *Log HTTP requests and responses to model instance logs* 
 
-<p align="center">
-<img src = readme_images/NewModelAPIConfig1.png width="800">
-</p>    
+![image](raw/latest/readme_images/NewModelAPIConfig1.png)
+   
 
 Click **Next**. On the next page - 
     
@@ -448,24 +349,21 @@ For **The function to invoke** enter
 `predict`
     
 And click **Create Model**
-    
-<p align="center">
-<img src = readme_images/NewModelAPIConfig.png width="800">
-</p>        
+    ![image](raw/latest/readme_images/NewModelAPIConfig.png)
+       
   
 Over the next 2-5 minutes, you'll see the status of your model go from Preparing to Build -> Building -> Starting -> Running
-<p align="center">
-<img src = readme_images/ModelAPIBuilding.png width="800">
-</p>        
+
+![image](raw/latest/readme_images/ModelAPIBuilding.png)
+       
     
     
 Once your model reaches the Running state - a pod containing your model object and code for inference is up and ready to accept REST API calls.
 
 To test your model navigate to the Overview tab. In the request field in the Tester tab enter a scoring request in JSON form. You can copy the sample request that you defined in your description field.
-    
-<p align="center">
-<img src = readme_images/ScoringRequest.png width="800">
-</p>        
+
+![image](raw/latest/readme_images/ScoringRequest.png)    
+       
     
 In the response box you will see a **prediction** value representing your model's predicted quality for a bottle of wine with the attributes defined in the Request box. Try changing 'is_red' from 0 to 1 and 'alcohol' from 11 to 5 to see how the predicted quality differs. Feel free to play around with different values in the Request box.
 
@@ -480,9 +378,8 @@ In the next lab we will deploy an R shiny app that exposes a front end for colle
 Now that we have a pod running to serve new model requests - we will build out a front end to make calling our model easier for end-users.
     
 To do so - in a new browser tab first navigate back to your Project and then in the left blue menu of your project click into the **Files** section and click **New File**
-<p align="center">
-<img src = readme_images/AddNewFileforAppsh.png width="800">
-</p>     
+![image](raw/latest/readme_images/AddNewFileforAppsh.png)
+    
 
 Next, we will create a file called app.sh. It's a bash script that will start and run the Shiny App server based on the inputs provided.
 Copy the following code snippet in - 
@@ -510,9 +407,9 @@ R -e 'shiny::runApp("./scripts/shiny_app.R", port=8888, host="0.0.0.0")'
 #python app-dash.py
 ```
 Name the file **app.sh** and click **Save**
-<p align="center">
-<img src = readme_images/appsh.png width="800">
-</p>         
+
+![image](raw/latest/readme_images/appsh.png)
+         
 
 
 Now navigate back into the Files tab, and enter the **scripts** folder. Click add a new file and name it `shiny_app.R` (make sure the file name is exactly that, it is case sensitive) and then paste the following into the file -
@@ -653,38 +550,29 @@ shinyApp(ui = ui, server = server)
 
 **Go to line 63** note that this is missing input for your model api endpoint. In a new tab navigate to your model API you just deployed. Go into overview and select the R tab as shown below. Copy lines 4-7 from the R code snippet. Switch back to your new file tab and paste the new lines in line 64 in your file.
 
-<p align="center">
-<img src = readme_images/RcodeSnippet.png width="800">
-</p>                    
+![image](raw/latest/readme_images/RcodeSnippet.png )
+                    
 Lines 61-79 in your file should look like the following (note the url and authenticate values will be different) 
-                   
-<p align="center">
-<img src = readme_images/ShinyCodePasted.png width="800">
-</p>         
+
+![image](raw/latest/readme_images/ShinyCodePasted.png)                   
+       
 
 Click **Save**
                    
 Now that you have your app.sh and shiny_app.R files created. Navigate to the **App** tab in your project
 
 Enter a title for your app - 'wine-app-yourname'
-
-<p align="center">
-<img src = readme_images/LaunchApp.png width="800">
-</p>       
+![image](raw/latest/readme_images/LaunchApp.png)
+      
 
 Click Publish.
                    
 You'll now see the below screen, once your app is active (should be within ~1-3 minutes) you can click the View App button. 
-
-<p align="center">
-<img src = readme_images/ViewApp.png width="800">
-</p>       
+![image](raw/latest/readme_images/ViewApp.png)
+       
         
 Once you're in the app you can try out sending different scoring requests to your model using the form on the right side of your page. Click **predict** to send a scoring request and view the results in the visualization on the left side.
-                   
-<p align="center">
-<img src = readme_images/ShinyScore.png width="800">
-</p>         
+![image](raw/latest/readme_images/ShinyScore.png)                   
 
 ## Section 4 - Collaborate Results
 
@@ -693,25 +581,18 @@ Once you're in the app you can try out sending different scoring requests to you
 Congratulations! You have now gone through a full workflow to pull data from an S3 bucket, clean and visualize the data, train several models across different frameworks, deploy the best performing model, and use a web app front end for easy scoring of your model. Now the final step is to get your model and front end into the hands of the end users.
 
 To do so we will navigate back to our project and click on the **App** tab
-
-<p align="center">
-<img src = readme_images/GoToAppPermissions.png width="800">
-</p>         
+![image](raw/latest/readme_images/GoToAppPermissions.png)
 
 
 From the App page navigate to the **Permissions** tab
 
 In the permissions tab update the permissions to allow anyone, including anonymous users
-
-<p align="center">
-<img src = readme_images/UpdateAppPermissions.png width="800">
-</p>         
+![image](raw/latest/readme_images/UpdateAppPermissions.png)
+        
 
 Navigate back to the **settings** tab and click **Copy Link App**
-
-<p align="center">
-<img src = readme_images/CopyAppLink.png width="800">
-</p>       
+![image](raw/latest/readme_images/CopyAppLink.png)
+       
 
 Paste the copied link into a new private/incognito window. Note that you're able to view the app without being logged into Domino. Try sending this URL to a colleague at your company to show them the work you've done.
 
