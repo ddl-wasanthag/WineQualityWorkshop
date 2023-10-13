@@ -10,7 +10,7 @@ import json
 import os
 
 #Read in data
-path = str('/mnt/data/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
 df = pd.read_csv(path)
 print('Read in {} rows of data'.format(df.shape[0]))
 
@@ -51,7 +51,7 @@ print("R2 Score: ", round(r2_score(y_test, preds),3))
 print("MSE: ", round(mean_squared_error(y_test, preds),3))
 
 #Code to write R2 value and MSE to dominostats value for population in experiment manager
-with open('/mnt/artifacts/dominostats.json', 'w') as f:
+with open('/mnt/dominostats.json', 'w') as f:
     f.write(json.dumps({"R2": round(r2_score(y_test, preds),3),
                        "MSE": round(mean_squared_error(y_test,preds),3)}))
 
@@ -80,7 +80,7 @@ plt.savefig('/mnt/artifacts/sklearn_actual_v_pred_hist.png')
 import pickle 
 
 # save best model
-file = '/mnt/code/models/sklearn_gbm.pkl'
+file = '/mnt/models/sklearn_gbm.pkl'
 pickle.dump(gbr, open(file, 'wb'))
 
 print('Script complete!')

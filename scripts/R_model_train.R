@@ -1,6 +1,6 @@
 print("Reading in data")
 project_name <- Sys.getenv('DOMINO_PROJECT_NAME')
-path <- paste('/mnt/data/',project_name,'/WineQualityData.csv')
+path <- paste('/domino/datasets/local/',project_name,'/WineQualityData.csv')
 path <- gsub(" ", "", path, fixed = TRUE)
 data <- read.csv(file=path)
 head(data)
@@ -45,11 +45,11 @@ print(mse_lm)
 diagnostics = list("R2" = rsquared_lm[1], 
                    "MSE"=mse_lm)
 library(jsonlite)
-fileConn<-file("/mnt/artifacts/dominostats.json")
+fileConn<-file("/mnt/dominostats.json")
 writeLines(toJSON(diagnostics), fileConn)
 close(fileConn)
 
-save(lm_model, file="/mnt/code/models/R_linear_model.Rda")
+save(lm_model, file="/mnt/models/R_linear_model.Rda")
 
 # install.packages("SHAPforxgboost")
 # install.packages("SHAPforxgboost")

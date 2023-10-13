@@ -17,7 +17,7 @@ n = 70
 
 #read in data then split into train and test
 
-path = str('/mnt/data/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
 data = pd.read_csv(path)
 print('Read in {} rows of data'.format(data.shape[0]))
 
@@ -74,7 +74,7 @@ print("R2 Score: ", r2)
 print("MSE: ", mse)
 
 #Code to write R2 value and MSE to dominostats value for population in experiment manager
-with open('/mnt/artifacts/dominostats.json', 'w') as f:
+with open('/mnt/dominostats.json', 'w') as f:
     f.write(json.dumps({"R2": r2,
                        "MSE": mse}))
 
